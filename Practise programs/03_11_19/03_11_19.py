@@ -47,4 +47,6 @@ while i < 20:
     # tell method will tell the cursor position
     # seek method will place the cursor in particular position
 
-
+#https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+#https://docs.python.org/3/library/
+#gaurav.sharma@edureka.co
