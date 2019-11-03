@@ -1,6 +1,6 @@
 import re
 
-# 1. what is the output of the following code
+# 1. A Robot moves in a Plane starting from the origin point (0,0). The robot can move toward UP, DOWN, LEFT, RIGHT. The trace of Robot movement is as given following:
 nums = set([1, 1, 2, 3, 3, 3, 4, 4])
 print(len(nums))
 # Ans : 4
