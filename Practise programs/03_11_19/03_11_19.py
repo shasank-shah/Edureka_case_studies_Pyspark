@@ -2,7 +2,7 @@
 tuple = (1, 2, [3, 4.5, 'element1'], 5, 6.6, 'element2')
 print(tuple)
 
-# We can have tuple inside in a tuple
+# We can have tuple inside in a list
 list1 = [1, 2, 3, (4, 5.5, 'element1'), 6, 7.5, 'element2']
 print(list1)
 
