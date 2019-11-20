@@ -35,18 +35,21 @@ class Customer:
         return self.lname
 
 
+'''
+customer1 = Customer()
+customer1.setTitle("Mr.")
+customer1.setFname("Barack")
+customer1.setLname("Obama")
 
-# customer1 = Customer()
-# customer1.setTitle("Mr.")
-# customer1.setFname("Barack")
-# customer1.setLname("Obama")
-#
-# customer2 = Customer()
-# customer2.setTitle("Mrs.")
-# customer2.setFname("George")
-# customer2.setLname("Bush")
-#
-# print("First Customer Title %s" , customer1.getTitle())
-# print("Second Customer Title %s" , customer2.getTitle())
-# print("First Customer Title %s" , customer1.getTitle())
+customer2 = Customer()
+customer2.setTitle("Mrs.")
+customer2.setFname("George")
+customer2.setLname("Bush")
 
+print(customer1.getTitle())
+print(customer1.getFname())
+print(customer1.getLname())
+print("First Customer Title", customer1.getTitle())
+print("Second Customer Title", customer1.getFname())
+print("First Customer Title", customer1.getLname())
+'''
