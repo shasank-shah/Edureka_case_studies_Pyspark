@@ -62,4 +62,3 @@ if __name__ == "__main__":
             print(customer.getTitle() + ' ' + customer.getFname() + ' ' + customer.getLname(), "does not exists in inventory")
     except CustomerNotAllowedException:
         print(customer.getTitle() + ' ' + customer.getFname() + ' ' + customer.getLname(), "is black listed")
-        #print("is black listed")
