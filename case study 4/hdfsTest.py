@@ -1,6 +1,12 @@
+#!/usr/bin/python
+#!/usr/bin/env python
+# coding: utf-8
+
 from __future__ import print_function
-import sys,time
+import sys, time
+from pyspark.context import SparkContext
 from pyspark.sql import SparkSession
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: hdfstest.py <file>", file=sys.stderr)
