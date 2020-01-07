@@ -4,11 +4,12 @@
 
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructField, StringType, StructType, DoubleType, DateType
+from pyspark.sql import functions as F
 
 # spark declaration
 spark = SparkSession \
         .builder \
-        .appName("4_7_1 Spark App") \
+        .appName("4_8_1 Spark App") \
         .getOrCreate()
 
 # variable declarations
@@ -19,7 +20,8 @@ dataFrameCSVDataSchema = [StructField('SYMBOL', StringType(), True), StructField
 dataFrameCSVFinalStruct = StructType(fields=dataFrameCSVDataSchema)
 dataFrameCSV = spark.read.csv(inputFileName, schema=dataFrameCSVFinalStruct)
 dataFrameCSV.createOrReplaceTempView('final_from_df')
-queryResult = spark.sql('SELECT * FROM final_from_df WHERE series = "EQ"')
+queryResult = spark.sql('SELECT * FROM final_from_df WHERE totaltrades < 500')
+updateResult = queryResult.withColumn("totaltrades", F.when(F.col("totaltrades")<500, 0))
 
 # writing to csv file using spark df
-queryResult.coalesce(1).write.option("header", "true").csv('EQ')
+updateResult.coalesce(1).write.option("header", "true").csv('TOTALTRADES')
